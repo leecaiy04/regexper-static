@@ -65,7 +65,7 @@ export default {
     this.regexp = this.properties.regexp;
 
     // If there is no need for a label, then proxy to the nested regexp.
-    if (this.properties.capture.textValue == '?:') {
+    if (this.properties.capture.textValue === '?:') {
       this.proxy = this.regexp;
     }
   }
