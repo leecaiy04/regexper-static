@@ -22,6 +22,12 @@ describe('parser/javascript/subexp.js', function() {
     '(?!test)': {
       regexp: jasmine.objectContaining({ textValue: 'test' })
     },
+    '(?<=test)': {
+      regexp: jasmine.objectContaining({ textValue: 'test' })
+    },
+    '(?<!test)': {
+      regexp: jasmine.objectContaining({ textValue: 'test' })
+    },
     '(?:test)': {
       regexp: jasmine.objectContaining({ textValue: 'test' }),
       proxy: jasmine.objectContaining({ textValue: 'test' })
@@ -110,6 +116,14 @@ describe('parser/javascript/subexp.js', function() {
       },
       '(?!test)': {
         label: 'negative lookahead',
+        groupCounter: 1
+      },
+      '(?<=test)': {
+        label: 'positive lookbehind',
+        groupCounter: 1
+      },
+      '(?<!test)': {
+        label: 'negative lookbehind',
         groupCounter: 1
       },
       '(?:test)': {
