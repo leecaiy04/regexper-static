@@ -103,6 +103,14 @@ describe('parser/javascript/subexp.js', function() {
         label: 'negative lookahead',
         groupCounter: 1
       },
+      '(?<=test)': {
+        label: 'positive lookbehind',
+        groupCounter: 1
+      },
+      '(?<!test)': {
+        label: 'negative lookbehind',
+        groupCounter: 1
+      },
       '(?:test)': {
         label: '',
         groupCounter: 1
