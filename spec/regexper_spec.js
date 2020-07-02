@@ -1,7 +1,7 @@
 import util from '../src/js/util.js';
 import Regexper from '../src/js/regexper.js';
 import Parser from '../src/js/parser/javascript.js';
-import Snap from 'snapsvg';
+import Snap from 'snapsvg-cjs';
 
 describe('regexper.js', function() {
 
