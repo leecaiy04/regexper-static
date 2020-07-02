@@ -26,7 +26,7 @@ function watch() {
   gulp.watch(_.flatten([
     config.globs.sass,
     config.globs.js
-  ]), webpackTask);
+  ]), webpack);
   gulp.watch(config.globs.js, docs);
 };
 
