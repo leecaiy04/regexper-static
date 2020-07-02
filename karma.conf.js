@@ -8,21 +8,17 @@ module.exports = function(karma) {
     reporters: ['progress', 'notify'],
     colors: true,
     logLevel: karma.LOG_INFO,
-    browsers: ['Firefox'],
+    browsers: ['Chrome'],
     autoWatch: true,
     singleRun: false,
     webpack: {
       devtool: 'inline-source-map',
       module: {
-        loaders: [
+        rules: [
           {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
-          },
-          {
-            test: require.resolve('snapsvg'),
-            loader: 'imports-loader?this=>window,fix=>module.exports=0'
           },
           {
             test: /\.peg$/,
